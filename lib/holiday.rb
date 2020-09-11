@@ -85,7 +85,7 @@ def all_supplies_in_holidays(holiday_hash)
       holiday_array = holiday.to_s.split("")
       holiday_name = []
       holiday_array.each_with_index do |letter, index|
-        if index == 0 || holiday_array[index - 1] == " "
+        if index == 0 || holiday_array[index - 1] == "_"
           holiday_name << letter.upcase
         elsif letter == "_"
           holiday_name << " "
