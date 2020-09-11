@@ -82,7 +82,9 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.each do |season, holidays|
     puts "#{season}:"
     holidays.each do |holiday, supplies|
-      puts "#{holiday}: #{supplies.join}"
+      holiday_name = holiday.split
+      binding.pry
+      puts "#{holiday_name}: #{supplies.join}"
     end
   end  
 
