@@ -91,8 +91,11 @@ def all_supplies_in_holidays(holiday_hash)
           holiday_name << letter
         end
       end
-      holiday_name.join
-      binding.pry
+      name = holiday_name.join
+      name_array = name.split(" ")
+      name_array.each do |word|
+        word
+      end
       puts "  #{}: #{supplies.join(", ")}"
     end
   end  
