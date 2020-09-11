@@ -84,18 +84,16 @@ def all_supplies_in_holidays(holiday_hash)
     holidays.each do |holiday, supplies|
       holiday_array = holiday.to_s.split("")
       holiday_name = []
-      holiday_array.each do |letter|
-        if letter == "_"
+      holiday_array.each_with_index do |letter, index|
+        if index == 0 || holiday_array[index - 1] == " "
+          holiday_name << letter.upcase
+        elsif letter == "_"
           holiday_name << " "
         else
           holiday_name << letter
         end
       end
       name = holiday_name.join
-      name_array = name.split(" ")
-      name_array.map! do |word|
-        word.capitalize!
-      end
       puts "  #{name}: #{supplies.join(", ")}"
     end
   end  
