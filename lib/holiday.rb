@@ -91,12 +91,12 @@ def all_supplies_in_holidays(holiday_hash)
           holiday_name << letter
         end
       end
-      name = holiday_name.join.capitalize!
+      name = holiday_name.join
       name_array = name.split(" ")
       name_array.map! do |word|
         word.capitalize!
       end
-      puts "  #{name.join}: #{supplies.join(", ")}"
+      puts "  #{name}: #{supplies.join(", ")}"
     end
   end  
 end
