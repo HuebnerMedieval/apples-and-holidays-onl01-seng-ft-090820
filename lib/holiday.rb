@@ -91,7 +91,7 @@ def all_supplies_in_holidays(holiday_hash)
           holiday_name << letter
         end
       end
-      name = holiday_name.join
+      name = holiday_name.join.capitalize
       puts "  #{name}: #{supplies.join(", ")}"
     end
   end  
